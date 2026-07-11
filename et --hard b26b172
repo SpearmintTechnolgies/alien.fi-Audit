@@ -1,0 +1,47 @@
+[33m46bddd5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m gdf
+[33m849a78e[m asdsad
+[33mb26b172[m gf
+[33m095f895[m zxczc
+[33m960c8e0[m gf
+[33m779b9d8[m asdasd
+[33m9c6956c[m sdsfg
+[33m25fd791[m asd
+[33md889a4f[m Add AnimatedButton and AnimatedLink components; refactor buttons to use new components and integrate RollingText for enhanced UI
+[33mc741ef2[m dg
+[33m1247f3a[m dfg
+[33mced6e6f[m dfg
+[33mc857519[m aaaa
+[33ma8d2f13[m ghhhhh
+[33m364d22f[m sfdfdyj
+[33m5a46755[m hgfgh
+[33mff5fa06[m uijhg
+[33m8211ae0[m asddsasda
+[33mce37a73[m Update logo assets to use black transparent version across multiple components
+[33m4819672[m sfffkhjkhj
+[33me5fb6c9[m asddsa
+[33m22494cd[m dds
+[33mb6bdcd6[m Update EmailModal styles and add new logo assets
+[33mda1bdf8[m fdgfgfggf
+[33m92f029a[m iouik
+[33m5258adb[m iouik
+[33m68d8a17[m kjhgk
+[33m2124327[m ghjk
+[33maa0aa90[m dfdg
+[33m151e735[m fix: enhance layout styles for better print handling in OptimizationOpportunities and GrowthOpportunities components
+[33m3c2a84b[m feat: enhance Telegram notification logic to include user email requirement style: update UnlockModal component for improved UI consistency and branding
+[33m389fb18[m feat: update email branding to include 'Alien.fi' for consistency
+[33m32e7148[m refactor: simplify Telegram notification logic and improve contact display in submissions
+[33m37e0edf[m feat: update color scheme to #96EE52 across various components
+[33m42281ec[m Refactor styles in ProgressBar and OptionCard components for improved UI consistency
+[33m0306df1[m sdffd
+[33mdb56a08[m fd
+[33m13d7de4[m cv
+[33m80038f8[m sd
+[33m86b6023[m asd
+[33m499e612[m sdf
+[33md4a6662[m sfsd
+[33m1e1743e[m asdf
+[33me9e36cb[m asd
+[33m5632645[m fdss
+[33mc006e0e[m fix: correct formatting in renderReportToHtml function
+[33m996f0a0[m feat: add RAG styles and report content generator

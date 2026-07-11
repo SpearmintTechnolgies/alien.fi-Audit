@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Azeret+Mono:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-azeret: 'Azeret Mono', monospace;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EEF4FF;
+  background: linear-gradient(180deg, rgb(243, 243, 255) 0%, rgb(224, 226, 241) 100%);
+  color: #15182B;
+  font-family: var(--font-poppins);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-azeret);
+  color: #15182B;
+}
+
+/* ─── Option cards ─────────────────────────────────────────────────── */
+.option-card {
+  @apply relative flex items-start gap-4 p-5 rounded-2xl border cursor-pointer
+         transition-all duration-200 select-none;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-color: rgb(199, 200, 211);
+}
+
+.option-card:hover {
+  border-color: #15182B;
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.option-card.selected {
+  border-color: #15182B;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #15182B, 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.option-card.selected-multi {
+  border-color: #96EE52;
+  background: #15182B;
+  color: #ffffff;
+  box-shadow: 0 0 0 1px #96EE52, 0 8px 32px rgba(150, 238, 82, 0.2);
+}
+.option-card.selected-multi h1, .option-card.selected-multi h2, .option-card.selected-multi h3, .option-card.selected-multi h4, .option-card.selected-multi div {
+    color: #ffffff;
+}
+
+
+/* ─── Progress bar ─────────────────────────────────────────────────── */
+.progress-bar-track {
+  @apply w-full h-1.5 rounded-full overflow-hidden;
+  background: rgb(224, 226, 241);
+}
+
+.progress-bar-fill {
+  @apply h-full rounded-full transition-all duration-500 ease-out;
+  background: #96EE52;
+}
+
+/* ─── Glassmorphism card ───────────────────────────────────────────── */
+.glass-card {
+  background: rgba(243, 243, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(199, 200, 211);
+  border-radius: 24px;
+  box-shadow: 0 18px 56px rgba(0,0,0,0.12);
+}
+
+/* ─── Step container animation ─────────────────────────────────────── */
+.step-enter {
+  animation: fadeUp 0.35s ease both;
+}
+
+/* ─── Input fields ─────────────────────────────────────────────────── */
+.pp-input {
+  @apply w-full px-4 py-3 rounded-xl text-slate-900 text-sm outline-none
+         transition-all duration-200 placeholder:text-slate-400;
+  background: #ffffff;
+  border: 1px solid rgb(199, 200, 211);
+}
+
+.pp-input:focus {
+  border-color: #15182B;
+  box-shadow: 0 0 0 2px rgba(21, 24, 43, 0.2);
+}
+
+/* ─── Primary button ───────────────────────────────────────────────── */
+.pp-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+         font-semibold text-[#15182B] transition-all duration-200 disabled:opacity-50
+         disabled:cursor-not-allowed;
+  background: #96EE52;
+  font-family: var(--font-azeret);
+}
+
+.pp-btn-primary:not(:disabled):hover {
+  transform: scale(1.05);
+  background: #85DC45;
+  box-shadow: 0 8px 24px rgba(150, 238, 82, 0.4);
+}
+
+.pp-btn-primary:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+/* ─── Secondary / ghost button ─────────────────────────────────────── */
+.pp-btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg
+         font-medium text-black transition-all duration-200;
+  background: transparent;
+  border: 1px solid rgb(199, 200, 211);
+  font-family: var(--font-azeret);
+}
+
+.pp-btn-ghost:hover {
+  background: rgba(150, 238, 82, 0.1);
+  border-color: #96EE52;
+}
+
+/* ─── RAG badge ────────────────────────────────────────────────────── */
+.rag-red   { @apply text-rag-red   bg-rag-red-bg   border border-rag-red/30 rounded-md font-mono;   }
+.rag-amber { @apply text-rag-amber bg-rag-amber-bg border border-rag-amber/30 rounded-md font-mono; }
+.rag-green { @apply text-rag-green bg-rag-green-bg border border-rag-green/30 rounded-md font-mono; }
+
+/* ─── Scrollbar ────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgb(243, 243, 255); }
+::-webkit-scrollbar-thumb { background: rgb(199, 200, 211); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #15182B; }
+
+/* ─── Print Styles ─────────────────────────────────────────────────── */
+@media print {
+  /* Hide interactive elements when printing to PDF */
+  nav, header, button, .pp-btn-primary, .pp-btn-ghost, footer, #cost-scan-pdf-export-btn {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .glass-card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
