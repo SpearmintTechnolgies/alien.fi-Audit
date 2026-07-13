@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const response = NextResponse.next();
 
   const csp = `
@@ -38,7 +38,7 @@ export function middleware(request: NextRequest) {
     frame-ancestors
       http://localhost:3000
       https://localhost:3000
-      https://alien-fi-ebon.vercel.app;
+      https://alien-fi-2.vercel.app/
 
     frame-src
       'self';
