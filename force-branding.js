@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+//saddsa
 
 const dirsToScan = ['app', 'shared', 'src', 'config'];
 const rootFiles = ['package.json', 'README.md', 'tailwind.config.js'];
