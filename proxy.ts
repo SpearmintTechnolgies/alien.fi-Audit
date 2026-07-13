@@ -21,7 +21,7 @@ export function proxy(request: NextRequest) {
 
   response.headers.set("Content-Security-Policy", cspHeader);
 
-  // 2. Prevent clickjacking (X-Frame-Options)
+  // 2. Prevent clickjacking (X-Frame-Options) dgdf
   //response.headers.set("X-Frame-Options", "SAMEORIGIN");
 
   // 3. Prevent MIME-type sniffing
