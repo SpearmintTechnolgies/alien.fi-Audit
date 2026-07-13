@@ -13,7 +13,7 @@ export function proxy(request: NextRequest) {
     img-src 'self' data: blob: https:;
     font-src 'self' data: https://fonts.gstatic.com;
     connect-src 'self' https://generativelanguage.googleapis.com https://api.openai.com;
-    frame-ancestors 'self' https://Alien.org;
+    frame-ancestors 'self' https://www.alien.fi;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
@@ -22,7 +22,7 @@ export function proxy(request: NextRequest) {
   response.headers.set("Content-Security-Policy", cspHeader);
 
   // 2. Prevent clickjacking (X-Frame-Options)
-  response.headers.set("X-Frame-Options", "SAMEORIGIN");
+  //response.headers.set("X-Frame-Options", "SAMEORIGIN");
 
   // 3. Prevent MIME-type sniffing
   response.headers.set("X-Content-Type-Options", "nosniff");
