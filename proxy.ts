@@ -36,6 +36,8 @@ export function middleware(request: NextRequest) {
       https://*.googleapis.com;
 
     frame-ancestors
+      http://localhost:3000
+      https://localhost:3000
       https://alien-fi-ebon.vercel.app;
 
     frame-src
