@@ -13,7 +13,7 @@ export function proxy(request: NextRequest) {
     img-src 'self' data: blob: https:;
     font-src 'self' data: https://fonts.gstatic.com;
     connect-src 'self' https://generativelanguage.googleapis.com https://api.openai.com;
-    frame-ancestors 'self' https://www.alien.fi;
+    frame-ancestors 'self'  https://alien-fi-ebon.vercel.app;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
