@@ -99,7 +99,7 @@ export function useSubmitScan(): UseSubmitScanReturn {
         };
 
         // ── POST to backend ───────────────────────────────────────────────
-        const res = await fetch("/api/cost-scan/submit", {
+        const res = await fetch("/api/aicost-audit", {
           method:  "POST",
           headers: { "Content-Type": "application/json" },
           body:    JSON.stringify(payload),

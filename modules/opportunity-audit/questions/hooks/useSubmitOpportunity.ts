@@ -49,7 +49,7 @@ export function useSubmitOpportunity(): UseSubmitOpportunityReturn {
         if (!payload.company_size)         delete (payload as any).company_size;
         if (!payload.job_title?.trim())    delete (payload as any).job_title;
 
-        const response = await fetch("/api/opportunity-scan/submit", {
+        const response = await fetch("/api/ai-opportunity-audit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Image from "next/image";
 import { OpportunityWizard } from "@/modules/opportunity-audit/questions/OpportunityWizard";
-import { Header } from "@/components/Header";
 import { Target, Lightbulb, ClipboardList } from "lucide-react";
 import * as motion from "framer-motion/client";
 import { slideUp, staggerContainer, fadeIn } from "@/shared/components/animations";
@@ -29,8 +28,6 @@ export default async function AiOpportunityScanPage({ searchParams }: PageProps)
 
   return (
     <main className="min-h-screen bg-[#fafbff] bg-page-gradient">
-      <Header />
-
       <div className="max-w-5xl mx-auto px-4 py-12 md:py-20">
         {/* Hero */}
         <motion.div 

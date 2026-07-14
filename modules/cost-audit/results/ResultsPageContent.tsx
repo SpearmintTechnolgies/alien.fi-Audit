@@ -14,8 +14,6 @@ import { BrandLogo } from "@/components/BrandLogo";
 import { Cpu, Download, CheckCircle2 } from "lucide-react";
 import { RAG_META } from "@/shared/utils/rag-styles";
 
-import { Header } from "@/components/Header";
-
 import { ContactBar } from "@/shared/components/ContactBar";
 
 import * as motion from "framer-motion/client";
@@ -160,7 +158,6 @@ export default function ResultsPageContent() {
    return (
      <Fragment>
        <main className="min-h-screen bg-[#fafbff] bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] pb-12 overflow-x-hidden">
-       <Header />
 
        <motion.div 
          variants={staggerContainer}

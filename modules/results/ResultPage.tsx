@@ -2,7 +2,6 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { Header } from "@/components/Header";
 import * as motion from "framer-motion/client";
 import { slideUp, staggerContainer, fadeIn } from "@/shared/components/animations";
 
@@ -110,7 +109,6 @@ export default function ResultPage() {
 
   return (
     <main className="min-h-screen bg-[#fafbff] pb-12 overflow-x-hidden">
-      <Header />
 
       <motion.div
         variants={staggerContainer}

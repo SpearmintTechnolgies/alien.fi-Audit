@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { useSearchParams, useRouter } from "next/navigation";
 import { StoredScanResult } from "@/modules/opportunity-audit/types";
 import Image from "next/image";
-import { Header } from "@/components/Header";
+import Image from "next/image";
 
 import { Cpu, Download, CheckCircle2 } from "lucide-react";
 import { RAG_META } from "@/shared/utils/rag-styles";
@@ -154,7 +154,6 @@ export default function OpportunityResultsContent() {
    return (
      <Fragment>
        <main className="min-h-screen bg-[#fafbff] bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] pb-12 overflow-x-hidden">
-       <Header />
 
        <motion.div 
          variants={staggerContainer}
