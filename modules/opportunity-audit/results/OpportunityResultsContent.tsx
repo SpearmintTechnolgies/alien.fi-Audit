@@ -7,7 +7,6 @@ import toast from "react-hot-toast";
 import { useSearchParams, useRouter } from "next/navigation";
 import { StoredScanResult } from "@/modules/opportunity-audit/types";
 import Image from "next/image";
-import Image from "next/image";
 
 import { Cpu, Download, CheckCircle2 } from "lucide-react";
 import { RAG_META } from "@/shared/utils/rag-styles";
