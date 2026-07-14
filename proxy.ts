@@ -38,7 +38,7 @@ export default function proxy(request: NextRequest) {
     frame-ancestors
       http://localhost:3000
       https://localhost:3000
-      https://alien-fi-gamma.vercel.app;
+      https://alien-fi-pied.vercel.app
 
     frame-src
       'self';
