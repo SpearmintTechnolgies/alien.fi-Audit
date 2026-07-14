@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { Header } from "@/components/Header";
+import { Footer } from "@/shared/components/Footer";
 import { Target, Lightbulb, ClipboardList } from "lucide-react";
 import { CostScanWizard } from "@/modules/cost-audit/questions/CostScanWizard";
 
@@ -18,6 +20,7 @@ export const metadata: Metadata = {
 export default function AiCostScanPage() {
   return (
     <main className="min-h-screen bg-[#eef4ff] bg-page-gradient">
+      <Header />
       <div className="max-w-5xl mx-auto px-4 py-12 md:py-20">
         {/* ── Hero ───────────────────────────────────────────────── */}
         <div 
@@ -78,6 +81,7 @@ export default function AiCostScanPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }
