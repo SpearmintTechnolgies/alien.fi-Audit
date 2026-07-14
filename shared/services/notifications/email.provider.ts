@@ -249,7 +249,7 @@ export async function sendReportEmail(
 
     console.log(`[email.provider] ReportData constructed: ${JSON.stringify(reportData, null, 2)}`);
 
-    const host = process.env.NEXT_PUBLIC_APP_URL || "https://alien.fi";
+    const host = process.env.NEXT_PUBLIC_APP_URL || "https://alien-fi-pied.vercel.app";
     const viewReportLink = `${host}/ai/${isCost ? "cost-scan" : "opportunity-scan"}/results?id=${submissionId}`;
 
     const htmlContent = `<!DOCTYPE html>
@@ -260,21 +260,21 @@ export async function sendReportEmail(
 <body style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:#f8fafc;padding:40px 20px;color:#1e293b;margin:0;">
   <div style="max-width:560px;margin:0 auto;background:#ffffff;border-radius:12px;border:1px solid #e2e8f0;padding:40px;box-shadow:0 4px 6px rgba(0,0,0,0.02);">
     <div style="margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:20px;">
-      <span style="font-size:22px;font-weight:900;color:#96EE52;letter-spacing:-0.5px;">Alien.fi</span>
+      <span style="font-size:22px;font-weight:900;color:#96EE52;letter-spacing:-0.5px;">Alien</span>
     </div>
     <h2 style="font-size:20px;font-weight:700;color:#0f172a;margin-top:0;margin-bottom:12px;">Your Audit Report is Ready</h2>
     <p style="font-size:14px;line-height:1.6;color:#475569;margin-bottom:20px;">
       Hello ${recipientName || 'there'},
     </p>
     <p style="font-size:14px;line-height:1.6;color:#475569;margin-bottom:24px;">
-      Thank you for choosing Alien.fi. We have completed your <strong>${reportTitle}</strong>. 
+      Thank you for choosing Alien. We have completed your <strong>${reportTitle}</strong>. 
       The complete, detailed PDF report has been generated and is attached directly to this email.
     </p>
     <p style="font-size:12px;color:#94a3b8;border-top:1px solid #e2e8f0;padding-top:20px;margin-top:0;line-height:1.5;">
       If you have any questions or would like to discuss the findings with our consulting team, please reply directly to this email.
       <br><br>
       Best regards,<br>
-      <strong>Alien.fi Audit Team</strong>
+      <strong>Alien Audit Team</strong>
     </p>
   </div>
 </body>
@@ -298,7 +298,7 @@ export async function sendReportEmail(
     const requestBody = JSON.stringify({
       sender: { name: senderName, email: senderEmail },
       to: [{ email, name: recipientName }],
-      subject: `Your ${reportTitle} Report — Alien.fi`,
+      subject: `Your ${reportTitle} Report — Alien`,
       htmlContent,
       attachment: [
         {

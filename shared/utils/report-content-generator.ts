@@ -208,7 +208,7 @@ export function renderReportToHtml(report: ReportData, options: { mode: "web" | 
 
   const { mode } = options;
   const isPdf = mode === "pdf";
-  const host = process.env.NEXT_PUBLIC_APP_URL || "https://alien.fi";
+  const host = process.env.NEXT_PUBLIC_APP_URL || "https://alien-fi-pied.vercel.app";
   const viewReportLink = `${host}/ai/${report.reportType === "cost" ? "cost-scan" : "opportunity-scan"}/results?id=${report.submissionId}`;
 
   let bodyContent = "";
@@ -220,7 +220,7 @@ export function renderReportToHtml(report: ReportData, options: { mode: "web" | 
       <div class="cover-logo">
         ${report.logoBase64
           ? `<img src="${report.logoBase64}" alt="Alien" />`
-          : `<span style="color: #22c55e; font-weight: bold;">Alien.fi</span>`
+          : `<span style="color: #22c55e; font-weight: bold;">Alien</span>`
         }
       </div>
       <div class="cover-type">
